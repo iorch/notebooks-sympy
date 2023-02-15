@@ -1,0 +1,11 @@
+default_bit = 4096
+distinguished_name = req_distinguished_name
+prompt = no
+
+[req_distinguished_name]
+countryName             = MX
+stateOrProvinceName     = Jalisco
+localityName            = Guadalajara
+organizationName        = GobJal
+commonName              = localhost
+

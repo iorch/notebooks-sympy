@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  bobross: 
+    build: 
+      context: ./jupyter_base_notebook/
+      args: 
+        JUPYTER_PASSWORD: ${JUPYTER_PASSWORD}
+    image: bobross
+    container_name: bobross
+    env_file: ./.env
+    command: jupyter notebook
+    ports:
+        - ${JUPYTER_PORT}:1443
+    volumes:
+        - ./jupyter_base_notebook/src/:/home/jovyan/src/
+        - ./jupyter_base_notebook/data/:/home/jovyan/src/notebooks/data
+
