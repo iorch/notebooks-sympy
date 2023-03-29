@@ -6,12 +6,12 @@ services:
       context: ./jupyter_base_notebook/
       args: 
         JUPYTER_PASSWORD: ${JUPYTER_PASSWORD}
-    image: bobross
-    container_name: bobross
+    image: upmns
+    container_name: upmns
     env_file: ./.env
     command: jupyter notebook
     ports:
-        - ${JUPYTER_PORT}:1443
+        - ${JUPYTER_PORT}:8888
     volumes:
         - ./jupyter_base_notebook/src/:/home/jovyan/src/
         - ./jupyter_base_notebook/data/:/home/jovyan/src/notebooks/data
