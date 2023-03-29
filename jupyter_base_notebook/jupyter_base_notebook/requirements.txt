@@ -1,4 +1,6 @@
 pandas
 psycopg2
 SQLAlchemy
-
+sympy==1.10.1
+cadabra2
+cadabra2-jupyter-kernel
